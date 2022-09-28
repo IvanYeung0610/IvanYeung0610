@@ -38,6 +38,7 @@ key = rng.choice(list)
 dictionarylist = rng.choice(krewes[key])
 """
 dictionarylist = rng.choice(list(krewes.keys()))
-print(dictionarylist)
-print(rng.choice(krewes[dictionarylist]))
+
+print("Period: " + str(dictionarylist))
+print("Name: " + str(rng.choice(krewes[dictionarylist])))
 
