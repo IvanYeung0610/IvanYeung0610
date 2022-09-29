@@ -3,7 +3,7 @@ Bobem | Ivan Yeung, Anson Wong
 SoftDev
 K05 -- Krewes/Python dictionary/We are trying to write a python program that randomly selects a devo from a dictionary after parsing
 9-28-2022
-Time spent: 1.5
+Time spent: 2
 DISCO:
 - You read a textfile in python similarly to how you do so with scanner in java (must open and close) #not so sure about this
 - split() method: string.split(separator [white space is default], maxsplit [all occurences is default]) returns a list of the seperated strings
@@ -52,19 +52,25 @@ f.close()
 krewes = {}
 devoList = text.split('@@@')
 #print("Before: " + str(devoList))
-#devoList = devoList[:-1] #getting rid of new line element
+devoList = devoList[:-1] #getting rid of new line element
 #print("After: " + str(devoList))
 #print(devoList)
 for devo in devoList:
     pd = devo.split("$$$")[0]
     if (has_key(krewes, pd) == False):
         krewes[pd] = [] 
-    krewes[pd].append(devo.split("$$$")[1:])
+    krewes[pd].append(devo.split("$$$")[1:]) # appending elements 1 and 2 will create a collection of 2 element lists with devo and ducky pair
 #print(krewes)
 period = rng.choice(list(krewes.keys()))
 devoduck = rng.choice(krewes[period])
 print("Period: " + str(period))
 print("Devo: " + str(devoduck[0]))
 print("Ducky: " + str(devoduck[1]))
+print()
+#Testing formated strings
+print(f'Period: {period}')
+print(f'Devo: {devoduck[0]}')
+print(f'Ducky: {devoduck[1]}')
+
 
     
