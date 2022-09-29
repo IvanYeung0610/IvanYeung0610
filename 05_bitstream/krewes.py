@@ -6,8 +6,8 @@ K05 -- Krewes/Python dictionary/We are trying to write a python program that ran
 Time spent: 1.5
 DISCO:
 - You read a textfile in python similarly to how you do so with scanner in java (must open and close) #not so sure about this
-- 
-- split() method: string.split(separator [white space is default], maxsplit [all occurences is default]) returns a list of the seperated strings 
+- split() method: string.split(separator [white space is default], maxsplit [all occurences is default]) returns a list of the seperated strings
+- You can check if a dictionary has a key by calling [ {key} in {dictionary} ]
 QCC:
 - Why is there an extra '\\n' element?
 - We can get rid of that extra element through list splicing
@@ -51,7 +51,9 @@ text = f.readlines()[0] #readlines returns a list of the lines- getting the 0th 
 f.close()
 krewes = {}
 devoList = text.split('@@@')
-devoList = devoList[:-1] #getting rid of new line element
+#print("Before: " + str(devoList))
+#devoList = devoList[:-1] #getting rid of new line element
+#print("After: " + str(devoList))
 #print(devoList)
 for devo in devoList:
     pd = devo.split("$$$")[0]
