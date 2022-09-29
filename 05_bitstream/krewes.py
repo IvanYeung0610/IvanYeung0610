@@ -6,7 +6,8 @@ K05 -- Krewes/Python dictionary/We are trying to write a python program that ran
 Time spent: 1.5
 DISCO:
 - You read a textfile in python similarly to how you do so with scanner in java (must open and close) #not so sure about this
-- split() method: string.split(separator [white space is default], maxsplit [all occurences is default])
+- 
+- split() method: string.split(separator [white space is default], maxsplit [all occurences is default]) returns a list of the seperated strings 
 QCC:
 - Why is there an extra '\\n' element?
 - We can get rid of that extra element through list splicing
@@ -39,6 +40,11 @@ for i in range(20):
 #print(txtString)
 
 #f = open('krewes.txt') #don't need path bc same directory
+def has_key(dictionary, key):
+    if key in dictionary:
+        return True
+    else:
+        return False
 
 f = open('krewes.txt')
 text = f.readlines()[0] #readlines returns a list of the lines- getting the 0th element is the first line
@@ -49,7 +55,7 @@ devoList = devoList[:-1] #getting rid of new line element
 #print(devoList)
 for devo in devoList:
     pd = devo.split("$$$")[0]
-    if (not krewes.has_key(pd)):
+    if (has_key(krewes, pd) == False):
         krewes[pd] = [] 
     krewes[pd].append(devo.split("$$$")[1:])
 #print(krewes)
@@ -58,3 +64,5 @@ devoduck = rng.choice(krewes[period])
 print("Period: " + str(period))
 print("Devo: " + str(devoduck[0]))
 print("Ducky: " + str(devoduck[1]))
+
+    
