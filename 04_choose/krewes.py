@@ -1,7 +1,7 @@
 """
-Ivan Yeung Jeffery Zou
+Rubber Ducks | Ivan Yeung, Jeffery Zou, Raven Tang
 SoftDev
-K01 -- Krewes/Python dictionary/We are trying to write a python program that randomly selects a devo from a dictionary
+K04 -- Krewes/Python dictionary/We are trying to write a python program that randomly selects a devo from a dictionary
 9-22-2022
 Time spent: .6
 
@@ -10,7 +10,7 @@ DISCO:
 - .choice(<sequence>) method chooses a random element from the sequence
 - .key() function can be used to look at all the keys in the dictionary that it refers to
 - .key() function cannot be used with .choice() as it is and has to be typecasted
-- import random as rng renames random so that rng can be used in the functions (e.g. rng.choice()) 
+- import random as rng renames random so that rng can be used in the functions (e.g. rng.choice())
 
 QCC:
 - Is devo supposed to be replaced?
@@ -41,4 +41,3 @@ dictionarylist = rng.choice(list(krewes.keys()))
 
 print("Period: " + str(dictionarylist))
 print("Name: " + str(rng.choice(krewes[dictionarylist])))
-
