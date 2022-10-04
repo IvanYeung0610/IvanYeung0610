@@ -1,0 +1,28 @@
+Rubber Duckies: Ivan Yeung, Jeffrey Zou, Raven (Ruiwen) Tang
+SoftDev
+K07 -- Teardown / Reviewing Other Teams' k05 and k06
+2022-10-03
+time spent: 0.5 hrs
+
+AABattery: Aaron Gershkovich, Anthony Sun
+05_bitstream
+* fstrings were used to format nicely and also to provide more context to the user (f"{devo[1][0]} of period {devo[0]} with companion {devo[1][1]}")
+* strip() removes trailing whitespace, which is more convenient and applicable than what we did (either slicing the string and removing the last few characters or splitting the string and removing the last element)
+* print(*list) removes the list syntax. After further testing, we learned that this indication will print a list as 2 5 6 instead of [2, 5, 6] (no brackets or commas)
+* use of tuples to pair sets of information together (pairing devo name and ducky name in a tuple, pairing returned info in a tuple : period and names)
+06_py-csv
+* The use of rindex() was similar to our use of rsplit(), both of which parse a string from the right hand side.
+* Almost every functionality is wrapped up inside a function, which makes it easier to apply this code in similar situations and robutifies the code.
+* One method that was created is a readfile() method that takes in the string name of a file.
+* We were wondering if it's necessary/recommended to close every file that has been opened and used. We noticed different teams made different choices in this aspect, so we're wondering if there's a best practice, and if so, what it is.
+* pop() is used to remove the "Total" key-value pair from the dictionary
+
+Pink Oranges: Ryan Lau, Ayman Habib
+05_bitstream
+* When printing the period number, fstrings automatically cast the int as a string.
+* This team's code stores the devo and ducky name in the same string in the dictionary, so the appropriate information is printed at the end, but the program is unable to differentiate between where the devo's name ends and the ducky's name begins, especially if either contains a space.
+06_py-csv
+* This team decided to use csv module and csv.reader in order to reduce manual parsing of the file.
+* They also chose to use random.choices, which makes it a lot more direct/streamlined in inputting weights and options, and generating an appropriate element from those weights and options.
+* join() was used to relink strings after removingt the first and last lines and cleaning up across line breaks.
+
