@@ -35,10 +35,7 @@ for i in range(20):
 
 #f = open('krewes.txt') #don't need path bc same directory
 def has_key(dictionary, key):
-    if key in dictionary:
-        return True
-    else:
-        return False
+    return key in dictionary
 
 f = open('krewes.txt')
 text = f.readlines()[0] #readlines returns a list of the lines- getting the 0th element is the first line
@@ -53,7 +50,7 @@ for devo in devoList:
     pd = devo.split("$$$")[0]
     if (has_key(krewes, pd) == False):
         krewes[pd] = []
-    krewes[pd].append(devo.split("$$$")[1:]) # appending elements 1 and 2 will create a collection of 2 element lists with devo and ducky pair
+    krewes[pd].append(devo.split("$$$")[1:]) # appending elements 1 and 2 will create a dictionary of 2 element lists with devo and ducky pair
 #print(krewes)
 period = rng.choice(list(krewes.keys()))
 devoduck = rng.choice(krewes[period])
