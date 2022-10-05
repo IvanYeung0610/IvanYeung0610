@@ -22,7 +22,10 @@ app.run()  # Q5: Where have you seen similar constructs in other languages?
 DISCO:
 * We don't have Flask installed on our personal computers, which was leading to the ModuleNotFound error. We needed to install it as a package in Thonny before attempting to import anything.
 * The hello_world() function is defined but never called. However, we receive the output in the console and the message in the webpage - maybe this means hello_world() is called within the app.run() invocation.
-* Changing the string in @app.route causes the provided webpage to lead to an unfound URL. So it appears that this @app.route line indicates where the web page lives and how to properly get there. We think that it's probably a good idea to leave the string unchanged as a preset so as not to interfere with the webpage.
+* Changing the string in @app.route causes the provided webpage to lead to an unfound URL. So it appears that this @app.route line indicates where the web page lives and how to properly get there.
+We think that it's probably a good idea to leave the string unchanged as a preset so as not to interfere with the webpage.
+* The file name is the same as the Flask variable.
+
 QCC:
 0. We've seen similar syntax in Java, especially with overloaded constructors and typecasting. Here, Flask would be the constructor name, and __name__ is the parameter it takes in.
 1. We've seen '/' in file paths when we're working with directories in Terminal, and the character also shows up in URLs, similarly denoting a kind of path.
