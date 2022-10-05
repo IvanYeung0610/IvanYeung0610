@@ -1,9 +1,16 @@
+#RUBBER DUCKS: Ivan Yeung, Jeffrey Zou, Raven (Ruiwen) Tang
+#SoftDev
+#CodingBat Exercises
+#2022-09-22
+#time spent: 3.0 hrs
+
+#Given an array of ints, return True if one of the first 4 elements in the array is a 9. The array length may be less than 4.
 def array_front9(nums):
   if len(nums) < 4:
     for j in nums:
       if j == 9:
         return True
-    return False
+    return False    
   else:
     counter = 0
     while counter < 4:
@@ -11,3 +18,7 @@ def array_front9(nums):
         return True
       counter += 1
     return False
+  
+print(array_front9([1, 2, 9, 3, 4]), "→ True")
+print(array_front9([1, 2, 3, 4, 9]), "→ False")
+print(array_front9([1, 2, 3, 4, 5]), "→ False")

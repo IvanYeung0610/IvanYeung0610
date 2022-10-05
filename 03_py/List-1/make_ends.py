@@ -1,5 +1,16 @@
+#RUBBER DUCKS: Ivan Yeung, Jeffrey Zou, Raven (Ruiwen) Tang
+#SoftDev
+#CodingBat Exercises
+#2022-09-22
+#time spent: 3.0 hrs
+
+#Given an array of ints, return a new array length 2 containing the first and last elements from the original array. The original array will be length 1 or more.
 def make_ends(nums):
   arr = [0,0]
   arr[0] = nums[0]
   arr[1] = nums[len(nums)-1]
   return arr
+
+print(make_ends([1, 2, 3]), "→ [1, 3]")
+print(make_ends([1, 2, 3, 4]), "→ [1, 4]")
+print(make_ends([7, 4, 6, 2]), "→ [7, 2]")
