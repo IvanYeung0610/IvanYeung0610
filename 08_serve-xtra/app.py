@@ -48,10 +48,13 @@ app = Flask(__name__) #create instance of class Flask
 
 def hello_world():
     print(__name__)
-    teamName = "ZIMZIM(mermann Telegram): Ziying Jian, Maya Nelson, Ivan Yeung" + "<br>"
+    teamName = "<h1>" + "ZIMZIM(mermann Telegram): Ziying Jian, Ivan Yeung, Maya Nelson" + "</h1>" + "<br>"
+    print("teamName printed")
     selectedOccup = "<br>" +"Selected occupation: " + random.choices(jobs, weights = weight)[0] + "<br>"
      #Prints the only element in the list
+    print("selectedOccup printed")
     listJobs = "<br>" + "List of jobs: " + str(jobs) 
+    print("listJobs printed")
     return teamName + selectedOccup + listJobs
 
 if __name__ == "__main__":  # true if this file NOT imported
