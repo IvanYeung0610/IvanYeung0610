@@ -3,7 +3,7 @@ ZIMZIM(mermann Telegram) Ziying Jian, Maya Nelson, Ivan Yeung
 SoftDev
 K02 -- flask-jinja
 2022-10-13
-time spent: 0 hr
+time spent: .3 hr
 '''
 
 '''
@@ -19,10 +19,12 @@ DISCOS:
 {% for item in collection %} {{ item }}
 {% endfor %}
 when opening the html file from the file directory.
+-When opening an html file from the directory on local machine, it will not have https. 
+Instead it will have file followed by the route to the html from machine.
 
 
 QCC:
-- What does the 
+- When we ran the app.py program in class, the link that was returned was not able to direct us to a working webpage.
 
 '''
 
