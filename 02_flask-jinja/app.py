@@ -3,7 +3,7 @@ ZIMZIM(mermann Telegram) Ziying Jian, Maya Nelson, Ivan Yeung
 SoftDev
 K02 -- flask-jinja
 2022-10-13
-time spent: .3 hr
+time spent: .6 hr
 '''
 
 '''
