@@ -3,7 +3,7 @@ ZIMZIM(mermann Telegram) Ziying Jian, Maya Nelson, Ivan Yeung
 SoftDev
 K02 -- flask-jinja
 2022-10-13
-time spent: .6 hr
+time spent: .67 hr
 '''
 
 '''
@@ -16,7 +16,8 @@ The final parameter is a variable used to replace the variable holders({}) in th
 
 
 DISCOS:
-Q0.
+Q0. When trying to access the template html page, we come to a page with 'NameError: name 'render_template' is not defined'
+along with a table with the Traceback of our most recent calls.
 Q1. The URL for the html page in the templates directory is actually http://127.0.0.1:5000/my_foist_template
 Q2. The first argument is the html file that this program will render. 
 The second argument will be the name of the tab when accessing model_tmplt.html after running app.py.
@@ -27,7 +28,7 @@ The third argument gives the f string in model_tmplt.html the variable it uses.
 {% endfor %}
 when opening the html file from the file directory.
 - Opening the model_tmplt.html file on local machine does not replace the variables in the f string.
--When opening an html file from the directory on local machine, it will not have https. 
+- When opening an html file from the directory on local machine, it will not have https. 
 Instead it will have file followed by the route to the html from machine.
 - When we ran the program, the url directed us to a webpage with "No hablo queso"
 - When we use the url 'http://127.0.0.1:5000/my_foist_template', we get the webpage with the html of model_templt.
@@ -37,6 +38,7 @@ The webpage shows the the elements of the list coll and there is a breakline aft
 
 QCC:
 - When we ran the app.py program in class, the link that was returned was not able to direct us to a working webpage.
+Is this suppose to happen?
 
 '''
 
