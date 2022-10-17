@@ -1,6 +1,10 @@
-# Clyde 'Thluffy' Sinclair
-# SoftDev
-# Oct 2022
+'''
+ZIMZIM(mermann Telegram) Ziying Jian, Maya Nelson, Ivan Yeung
+SoftDev
+K02 -- flask-forms
+2022-10-14
+time spent: 1.5 hr
+'''
 
 from flask import Flask             #facilitate flask webserving
 from flask import render_template   #facilitate jinja templating
@@ -32,15 +36,15 @@ PROTIP: Insert your own in-line comments
 def disp_loginpage():
     print("\n\n\n")
     print("***DIAG: this Flask obj ***")
-    print(app)
+    print(app) #returns <Flask 'app'>
     print("***DIAG: request obj ***")
-    print(request)
+    print(request) #returns the URL of the page(<Request 'http://127.0.0.1:5000/' [GET]>)
     print("***DIAG: request.args ***")
-    print(request.args)
-    print("***DIAG: request.args['username']  ***")
-    print(request.args['username'])
+    print(request.args) #returns ImmutableMultiDict([]) along with its contents if present
+    #print("***DIAG: request.args['username']  ***")
+    #print(request.args['username'])
     print("***DIAG: request.headers ***")
-    print(request.headers)
+    print(request.headers) #returns information on the machine and the web browser accessing the link
     return render_template( 'login.html' )
 
 
@@ -48,15 +52,16 @@ def disp_loginpage():
 def authenticate():
     print("\n\n\n")
     print("***DIAG: this Flask obj ***")
-    print(app)
+    print(app) #returns <Flask 'app'>
     print("***DIAG: request obj ***")
-    print(request)
+    print(request) #returns the URL of the page(<Request 'http://127.0.0.1:5000/auth?username=hi&sub1=Submit+Query' [GET]>)
     print("***DIAG: request.args ***")
-    print(request.args)
+    print(request.args) #returns ImmutableMultiDict([]) along with its contents if present (ex. ImmutableMultiDict([('username', 'hi'), ('sub1', 'Submit Query')]))
     print("***DIAG: request.args['username']  ***")
-    print(request.args['username'])
+    print(request.args['username']) #returns the string that was inputted into the query and submitted
     print("***DIAG: request.headers ***")
-    print(request.headers)
+    print(request.headers) #returns information on the machine and the web browser accessing the link
+    #return f"{request.args['username']} is AWESOME" #replaces the variable in the f string with the inputted value.
     return "Waaaa hooo HAAAH"  #response to a form submission
 
 

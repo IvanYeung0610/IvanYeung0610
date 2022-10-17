@@ -13,10 +13,82 @@ When we changed "/auth,"
 * When a value is submitted into the form, flask automatically puts the value into a dictionary as part of a key-value
 * If the import statement in line 6 in app.py is removed, it causes a 500 internal server error that indicates the server
 encountered a problem that prevented it from fulfilling the request -- a general catch-all error statement
+* When a value is entered inside the query, it directs us to a new page with the URL http://127.0.0.1:5000/auth?username=<name-you-entered-in the-Query>&sub1=Submit+Query.
+It also displays the function attached to @app.route("/auth") [both print and return statements] and the function attached to @app.rout("/") no longer runs/displays.
+* print(app) at both routes returns: <Flask 'app'>
+* print(request) returns: <Request 'http://127.0.0.1:5000/' [GET]> [The URL in the <> depends on which page the user is on]
+* print(request.args) @app.route("/") returns:
+  ImmutableMultiDict([])
+* print(request.args) @app.route("/auth") returns:
+  ImmutableMultiDict([('username', '<name-you-entered-in the-Query>'), ('sub1', 'Submit')])
+* print(request.headers) at both routes on Firefox returns:
+    Host: 127.0.0.1:5000
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:105.0) Gecko/20100101 Firefox/105.0
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+    Accept-Language: en-US,en;q=0.5
+    Accept-Encoding: gzip, deflate, br
+    Connection: keep-alive
+    Upgrade-Insecure-Requests: 1
+    Sec-Fetch-Dest: document
+    Sec-Fetch-Mode: navigate
+    Sec-Fetch-Site: none
+    Sec-Fetch-User: ?1
+* print(request.headers) at both routes on Chrome returns:
+    <Flask 'app'>
+    ***DIAG: request obj ***
+    <Request 'http://127.0.0.1:5000/' [GET]>
+    ***DIAG: request.args ***
+    ImmutableMultiDict([])
+    ***DIAG: request.headers ***
+    Host: 127.0.0.1:5000
+    Connection: keep-alive
+    Sec-Ch-Ua: "Chromium";v="106", "Google Chrome";v="106", "Not;A=Brand";v="99"
+    Sec-Ch-Ua-Mobile: ?0
+    Sec-Ch-Ua-Platform: "Windows"
+    Upgrade-Insecure-Requests: 1
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+    Sec-Fetch-Site: none
+    Sec-Fetch-Mode: navigate
+    Sec-Fetch-User: ?1
+    Sec-Fetch-Dest: document
+    Accept-Encoding: gzip, deflate, br
+    Accept-Language: en-US,en;q=0.9
+* print(request.headers) at both routes on MicroSoft Edge returns:
+    Host: 127.0.0.1:5000
+    Connection: keep-alive
+    Sec-Ch-Ua: "Chromium";v="106", "Microsoft Edge";v="106", "Not;A=Brand";v="99"
+    Sec-Ch-Ua-Mobile: ?0
+    Sec-Ch-Ua-Platform: "Windows"
+    Upgrade-Insecure-Requests: 1
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36 Edg/106.0.1370.42
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+    Sec-Fetch-Site: none
+    Sec-Fetch-Mode: navigate
+    Sec-Fetch-User: ?1
+    Sec-Fetch-Dest: document
+    Accept-Encoding: gzip, deflate, br
+    Accept-Language: en-US,en;q=0.9
+* Commenting out print(app), print(request.args), and print(request.headers) does not seem to affect the appearance of the webpage or its interactions.
+It is probably used to help with debugging. The request.args is most likely used to gain access to the inputs of the form.
+The request.headers seems to retrieve the information of the machine that is accessing the webpage.
+* Commenting in print(request.args['username']) @app.route("/") causes a BadRequestKeyError when attempting to access the site.
+* Commenting in print(request.args['username']) @app.route("/auth") does not cause any error.
+In fact, it prints out the inputted username in the query and it is probably what links the data inputted in the frontend to the backend database.
+* Attempting to print(request.args['username']) @app.route("/") probably returned an error because there was no input to fetch
+since the user has not even put anything into the query let alone accessed the webpage.
+* This program can open up multiple pages on multiple browsers(Firefox, Chrome, Microsoft Edge) simultaneously. Each page runs
+the function of the route that they are on and the terminal returns are unique to them. Even once a page has moved on to @app.route("/auth"),
+new pages can still be opened to @app.route("/") and have inputs in the query that leads to  @app.route("/auth"). The program also continues
+to print print(app), print(request.args), and print(request.headers) for each page.
+* The tuple ('sub1', 'Submit Query') is always the same regardless of how many times you submit in different tabs.
+* You can use f strings to return a page with text based on what the user inputted. This can allow for a sort of call and response.
+This probably means you can use if statements and return a page based on the input since you have access to the input using request.args['username'].
 
 QCC
 * What is jinja?
 * What are requests, request args and request headers?
 * What does app.route exactly do regarding file access? Why do we still need it?
+* Why is there a tuple in ImmutableMultiDict for the submission of query('sub1', 'Submit Query')?
 * From DZJ: I'm still struggling to get these files to run on my home machine and installing flask in my virtual environment.
 How would I go about fixing this?
