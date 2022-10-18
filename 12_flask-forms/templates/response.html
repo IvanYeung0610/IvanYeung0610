@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--
+# <div ID="success"></div>: Daniel Yentin, Ivan Yeung
+# SoftDev
+# Oct 2022
+
+     simple demo of HTML forms via Flask
+
+     trioTASK:
+     If any member of team has forms experience, let their know-how OSMOTE.
+     If no one does, seek external assistance.
+
+     PROTIP: Revisit code from intro if you have it.
+     Peruse this code together and discuss how it should work,
+       in conjunction with the back end apparatus.
+ -->
+
+
+<html>
+
+  <head>
+    <title> RESPONSE PAGE </title>
+  </head>
+
+  <body>
+    <h1>
+      THANK YOU FOR ANSWERING THE FORM!!!
+    </h1>
+
+
+    <h3>
+      METHOD USED: {{method_used}}
+    </h3>
+
+    <h3>
+      INPUTTED USERNAME: {{username}}
+    </h3>
+
+    <body>
+      GET: get method holds the args in the url, making it unsecure if you want to enter confidential information
+      <br>
+      POST: post method does not hold the args in the url
+    </body>
+
+    <br>
+  </body>
+
+</html>
