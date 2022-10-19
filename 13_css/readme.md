@@ -3,6 +3,8 @@ DISCO
 * Link a css file to an html file by adding  <link rel=“stylesheet” type=“text/css” href=“STYLE FILE”> inside <head></head>
 * Can inline style directly in html file with style attribute in tag
 * Wrapping parts of html with a div allows us to style in chunks
+* Indents do not matter in html
+* "margin:auto;" centers the entire body
 
 
 QCC
