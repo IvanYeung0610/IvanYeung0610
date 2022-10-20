@@ -62,10 +62,18 @@ def authenticate():
     # print("***DIAG: request.headers ***")
     # print(request.headers)
     # return "Waaaa hooo HAAAH"  #response to a form submission
-    if(request.method == 'POST'):
-        return render_template('response.html', method_used = request.method, username = request.form['username'] )
-    else:
-        return render_template('response.html', method_used = request.method, username = request.args['username'] )
+    # if(request.method == 'POST'):
+    #     return render_template('response.html', method_used = request.method, username = request.form['username'] )
+    # else:
+    #     return render_template('response.html', method_used = request.method, username = request.args['username'] )
+    
+    information_format = None
+    if (request.method == 'GET'):
+        information_format = request.args
+    elif (request.method == 'POST'):
+        information_format = request.form
+    
+    return render_template('response.html', method_used = request.method, username = information_format['username'] )
 
 
 
