@@ -1,9 +1,14 @@
-# HowTo Markdown like a pro
+# how-to :: Edit Markdown
+---
+## Overview
 
 > What is markdown?
 
 Markdown is a basic syntax used for formatting simple text. It allows for a multitude of text manipulation, such as size and formatting. Many common word processors such as Microsoft word and Google docs implement these features, but the syntax is hidden from you. Markdown allows you to specify, inline, what moddifications you want to apply to your text.
 
+### Estimated Time Cost: 0.3 hrs
+
+### Prerequisites:
 > How to view markdown?
 
 Many IDEs either support markdown out of the box, or have downloadable plugins/extensions that can convert your markdown into formatted text.
@@ -39,14 +44,22 @@ Ordered lists can be denoted using numbers starting at 1.
 
 Unordered lists can be denoted using a '- ' or '* '.
 - First item
-- Second item
-* Third item
+* Second item
+- Third item
 * Fourth item
 
 Code blocks can be denoted with backticks (\`\`) both ends of the code.
 
 \`print("hello world")\` &rarr; `print("hello world")`
 
-> Where can I find more information on markdown syntax?
+### Resource:
 
-There are tons of other features in markdown that aren't covered here and you can find out more at https://www.markdownguide.org/ to make your READMEs even more awesome!!!
+https://www.markdownguide.org/
+
+---
+
+Accurate as of (last update): 2022-10-20
+
+#### Contributors:  
+Ivan Yeung, pd2  
+Daniel Yentin, pd2  
