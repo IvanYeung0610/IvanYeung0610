@@ -1,7 +1,4 @@
-# Team Success: Daniel Yentin, Ivan Yeung
-# SoftDev
-# skeleton/stub :: SQLITE3 BASICS
-# Oct 2022
+# how-to :: SQL like a pro
 
 ## Observations
 1. SQL files are not readable as plaintext.
@@ -70,3 +67,10 @@
 
 ## Resource
 - https://www.sqlite.org/cli.html
+
+---
+Acurate as of (8:55 a.m.): 2022-10-25
+
+#### Contributors:
+Ivan Yeung, pd 2  
+Daniel Yentin, pd 2
