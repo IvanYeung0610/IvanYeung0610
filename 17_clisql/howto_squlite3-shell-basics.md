@@ -14,6 +14,7 @@
 2. Open up a terminal
 3. Enter the command ```$ sqlite3 ex1```
 4. Steps 1-3 can be skipped in Windows machines by double clicking on the sqlite3.exe icon
+5. Terminate the process with ctrl + d
 
 ## Tables
 - Syntax for creating a new table: create table <table_name>(column1 datatype, column2 datatype, . . .)
@@ -29,20 +30,39 @@
  bye bye|30
  ```
 - Syntax for viewing table in different format: .mode <modetype> (choose from one of the 14 available)
-1. ascii
-2. box
-3. csv
-4. column
-5. html
-6. insert
-7. json
-8. line
-9. list
-10. markdown
-11. quote
-12. table
-13. tabs
-14. tcl
+  - Ex:
+    ```
+    sqlite> .mode table
+    sqlite> select * from tbl1;
+    ```
+  - Ex Output:
+    ```
+    +---------+-----+
+    |   one   | two |
+    +---------+-----+
+    | hello!  | 10  |
+    | goodbye | 20  |
+    | bye bye | 30  |
+    +---------+-----+
+    ```
+  - Modes in squlite3:
+  1. ascii
+  2. box
+  3. csv
+  4. column
+  5. html
+  6. insert
+  7. json
+  8. line
+  9. list
+  10. markdown
+  11. quote
+  12. table
+  13. tabs
+  14. tcl
+
+## Reading from a file
+- 
 
 
 
