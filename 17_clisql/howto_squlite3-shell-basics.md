@@ -61,8 +61,10 @@
   13. tabs
   14. tcl
 
-## Reading from a file
-- 
+## Databases
+- ```.save FILENAME``` command saves the database into a file
+- ```.open FILENAME``` command opens a persistent database
+- ```sqlite3 FILENAME``` will open the database given that it exists (if it doesn't it makes a new database with that name and information is saved when it is terminated even if .save FILENAME is not called)
 
 
 
