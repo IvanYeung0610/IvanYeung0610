@@ -30,7 +30,6 @@ with open("students.csv", 'r') as students:
         id = row['id']
     
         c.execute(f"insert into students values('{name}', {age}, {id})")
-    #c.execute("select * from students;")
 
 with open("courses.csv", 'r') as courses:
     db.execute("DROP TABLE if exists courses")
