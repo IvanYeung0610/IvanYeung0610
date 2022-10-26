@@ -20,7 +20,7 @@ c = db.cursor()               #facilitate db ops -- you will use cursor to trigg
 # c.execute(command)    # run SQL statement
 
 with open("students.csv", 'r') as students:
-    db.execute("DROP TABLE if exists students")
+    db.execute("DROP TABLE if exists students") #semi colon at the end of command not required when using .execute command
     students = csv.DictReader(students)
     c.execute("create table students(name text, age int, id int)")
 
@@ -31,12 +31,13 @@ with open("students.csv", 'r') as students:
     
         c.execute(f"insert into students values('{name}', {age}, {id})")
     #c.execute("select * from students")
+    #c.fetchone()
 
 with open("courses.csv", 'r') as courses:
     db.execute("DROP TABLE if exists courses")
     '''
     Came across error when trying to execute this command when opening a pre existing .db file.
-    Was resolved by commenting out the c.execute("select * from students")
+    Was resolved by commenting out the c.execute("select * from students") inside previous with block
     ERROR:
         Traceback (most recent call last):
                 File "/home/students/2023/iyeung30/Documents/Soft Dev/IvanYeung0610/18_csv2db/db_builder.py", line 36, in <module>
@@ -54,6 +55,8 @@ with open("courses.csv", 'r') as courses:
         id = row['id']
         
         c.execute(f"insert into courses values('{code}', {mark}, {id})")
+c.execute("select * from students")
+c.fetchall()
 #==========================================================
 
 db.commit() #save changes
