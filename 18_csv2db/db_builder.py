@@ -30,12 +30,13 @@ with open("students.csv", 'r') as students:
         id = row['id']
     
         c.execute(f"insert into students values('{name}', {age}, {id})")
+    #c.execute("select * from students")
 
 with open("courses.csv", 'r') as courses:
     db.execute("DROP TABLE if exists courses")
     '''
     Came across error when trying to execute this command when opening a pre existing .db file.
-    Was resolved by deleting the .db file and remaking it by running the program again without the file already existing.
+    Was resolved by commenting out the c.execute("select * from students")
     ERROR:
         Traceback (most recent call last):
                 File "/home/students/2023/iyeung30/Documents/Soft Dev/IvanYeung0610/18_csv2db/db_builder.py", line 36, in <module>
