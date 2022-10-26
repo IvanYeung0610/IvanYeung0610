@@ -8,7 +8,7 @@ import csv       #facilitate CSV I/O
 
 
 DB_FILE="discobandit.db"
-
+#Opening the file from another machine does not neccesarily mean that it will work the same
 db = sqlite3.connect(DB_FILE) #open if file exists, otherwise create
 c = db.cursor()               #facilitate db ops -- you will use cursor to trigger db events
 
@@ -30,9 +30,21 @@ with open("students.csv", 'r') as students:
         id = row['id']
     
         c.execute(f"insert into students values('{name}', {age}, {id})")
+    #c.execute("select * from students;")
 
 with open("courses.csv", 'r') as courses:
     db.execute("DROP TABLE if exists courses")
+    '''
+    Came across error when trying to execute this command when opening a pre existing .db file.
+    Was resolved by deleting the .db file and remaking it by running the program again without the file already existing.
+    ERROR:
+        Traceback (most recent call last):
+                File "/home/students/2023/iyeung30/Documents/Soft Dev/IvanYeung0610/18_csv2db/db_builder.py", line 36, in <module>
+            db.execute("DROP TABLE if exists courses")
+        sqlite3.OperationalError: database table is locked
+
+
+    '''
     courses = csv.DictReader(courses)
     c.execute("create table courses(code text, mark int, id int)")
 
