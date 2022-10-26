@@ -1,7 +1,8 @@
-#Clyde "Thluffy" Sinclair
-#SoftDev  
-#skeleton/stub :: SQLITE3 BASICS
-#Oct 2022
+# Ivan Yeung Daniel Yentin
+# SoftDev
+# K18 -- (Python+SQLite)3: A Mare Widge Made in Hebben
+# 2022-10-25
+# time spent: 1
 
 import sqlite3   #enable control of an sqlite database
 import csv       #facilitate CSV I/O
@@ -28,24 +29,13 @@ with open("students.csv", 'r') as students:
         name = row['name']
         age = row['age']
         id = row['id']
-    
+
         c.execute(f"insert into students values('{name}', {age}, {id})")
     #c.execute("select * from students")
     #c.fetchone()
 
 with open("courses.csv", 'r') as courses:
     db.execute("DROP TABLE if exists courses")
-    '''
-    Came across error when trying to execute this command when opening a pre existing .db file.
-    Was resolved by commenting out the c.execute("select * from students") inside previous with block
-    ERROR:
-        Traceback (most recent call last):
-                File "/home/students/2023/iyeung30/Documents/Soft Dev/IvanYeung0610/18_csv2db/db_builder.py", line 36, in <module>
-            db.execute("DROP TABLE if exists courses")
-        sqlite3.OperationalError: database table is locked
-
-
-    '''
     courses = csv.DictReader(courses)
     c.execute("create table courses(code text, mark int, id int)")
 
@@ -53,13 +43,9 @@ with open("courses.csv", 'r') as courses:
         code = row['code']
         mark = row['mark']
         id = row['id']
-        
+
         c.execute(f"insert into courses values('{code}', {mark}, {id})")
-#c.execute("select * from students")
-#c.fetchall()
 #==========================================================
 
 db.commit() #save changes
 db.close()  #close database
-
-
