@@ -55,8 +55,8 @@ with open("courses.csv", 'r') as courses:
         id = row['id']
         
         c.execute(f"insert into courses values('{code}', {mark}, {id})")
-c.execute("select * from students")
-c.fetchall()
+#c.execute("select * from students")
+#c.fetchall()
 #==========================================================
 
 db.commit() #save changes
