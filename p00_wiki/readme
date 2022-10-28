@@ -1,0 +1,13 @@
+# Ivan Yeung Daniel Yentin
+# SoftDev
+# p00 -- Half Quick
+# 2022-10-28
+# time spent: 1 hr
+
+DISCO:
+
+QCC:
+* Does the query at the end of the URL make it unique to a URL with everything the same except the query?
+* What is the optimal format for site map?
+* What are applications of having more than one table in the database?
+* What is an example of "middleware" module? Do app.py and/or db_builder.py count?
