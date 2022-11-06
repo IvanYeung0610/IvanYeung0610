@@ -40,8 +40,12 @@ def login():
             #when both coditions are met, password is stored in the cookie and the response page is rendered
             session["username"] = request.form["username"]
             return render_template('response.html')
-    print("***DIAG: one of the conditions were not met ***")
-    return render_template('login.html')
+        else:
+            print("***DIAG: password did not match ***")
+            return render_template('login.html')
+    else:
+        print("***DIAG: username did not match ***")
+        return render_template('login.html')
 
 @app.route("/logout", methods=['POST'])
 # this function is called by the logout button when it is pressed on the response page
