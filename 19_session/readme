@@ -11,4 +11,6 @@ DISCO:
 * action attribute in html tells backend which function to refer to when it is activated
 
 QCC:
+* We couldn't seem to make the button go to the logout function using action attribute in the marker so we wrapped it in a form and added the attribute there
+* How do you make buttons direct to a route in html?
 * How is the cookies transferred from the local machine to other machines?
