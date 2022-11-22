@@ -5,6 +5,7 @@ K20 -- REST API
 time spent:  .3
 
 DISCO:
+* Python documentation for urllib.request package: [https://docs.python.org/3/library/urllib.request.html#module-urllib.request](https://docs.python.org/3/library/urllib.request.html#module-urllib.request)
 * Good resource to get started on requests module in python: [https://requests.readthedocs.io/en/latest/](https://requests.readthedocs.io/en/latest/)
 * requests allows us to access information from a https link
 QCC:
