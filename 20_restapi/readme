@@ -1,0 +1,10 @@
+Ivan Yeung and Vivian Graeber
+SoftDev
+K20 -- REST API
+2022-11-21
+time spent:  .3
+
+DISCO:
+* Good resource to get started on requests module in python: [https://requests.readthedocs.io/en/latest/](https://requests.readthedocs.io/en/latest/)
+* requests allows us to access information from a https link
+QCC:
