@@ -3,13 +3,13 @@ Ivan Yeung and Vivian Graeber
 SoftDev
 K20 -- REST API
 2022-11-21
-time spent:  .8
+time spent:  1.0
 '''
 from flask import Flask             #facilitate flask webserving
 from flask import render_template   #facilitate jinja templating
 from flask import request           #facilitate form submission
 import urllib.request
-import requests #https request module
+#import requests #https request module
 app = Flask(__name__) # Q0: Where have you seen similar syntax in other langs?
 
 file = open("key_nasa.txt", "r")
@@ -26,10 +26,11 @@ with urllib.request.urlopen(API_URL) as REQUEST:
     print("***DIAG: .read() command using urllib.request ***")
     print(REQUEST.read())
 ######################################### USING REQUESTS MODULE #########################################
+#needs to be pip installed
 
-r = requests.get(API_URL) #creating a response object that will get us the information we need
-print("***DIAG: the contents of .content command ***")
-print(r.content) # shows the content of what the request got from the URL
+# r = requests.get(API_URL) #creating a response object that will get us the information we need
+# print("***DIAG: the contents of .content command ***")
+# print(r.content) # shows the content of what the request got from the URL
 
 
 
