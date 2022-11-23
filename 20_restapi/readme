@@ -2,11 +2,13 @@ Ivan Yeung and Vivian Graeber
 SoftDev
 K20 -- REST API
 2022-11-21
-time spent:  1.0
+time spent:  1.3
 
 DISCO:
 * Python documentation for urllib.request package: [https://docs.python.org/3/library/urllib.request.html#module-urllib.request](https://docs.python.org/3/library/urllib.request.html#module-urllib.request)
 * Good resource to get started on requests module in python: [https://requests.readthedocs.io/en/latest/](https://requests.readthedocs.io/en/latest/)
 * requests allows us to access information from a https link
+* .json() decodes the response object and returns a dictionary
+
 QCC:
 * Decided not to use the urllib.request package and went for the requests module

@@ -3,7 +3,7 @@ Ivan Yeung and Vivian Graeber
 SoftDev
 K20 -- REST API
 2022-11-21
-time spent:  1.0
+time spent:  1.3
 '''
 from flask import Flask             #facilitate flask webserving
 from flask import render_template   #facilitate jinja templating
