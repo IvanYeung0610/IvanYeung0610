@@ -35,7 +35,7 @@ title = api_dict['title']
 
 @app.route("/" , methods=['GET', 'POST'])
 def disp_loginpage():
-    return render_template( 'main.html', image=image_link, explanation=explanation alt_text=title)
+    return render_template( 'main.html', image=image_link, explanation=explanation, alt_text=title)
 
 
 if __name__ == "__main__": #false if this file imported as module
