@@ -1,0 +1,16 @@
+Ivan Yeung and Vivian Graeber
+SoftDev
+K20 -- REST API
+2022-28-21
+time spent:  1.5
+
+DISCO:
+* Bootstrap is a frame work that allows us to easily style our website without actually having to create
+a css file and manually style our site.
+* When using ratio helper, the youtube link you use is not the one in the browser when you watch a video.
+The format should be https://www.youtube.com/embed/{VIDEO_ID}
+* <div>s are a major part of bootstrap and it is used to create various features that it provides such as grids,
+forms, buttons, badges, etc...
+
+QCC:
+* Why is our scrollspy not going to our fourth tab when we scroll up?
