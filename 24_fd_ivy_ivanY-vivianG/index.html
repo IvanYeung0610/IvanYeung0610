@@ -1,9 +1,19 @@
 <!DOCTYPE html>
+<!--
+  Ivan Yeung and Vivian Graeber
+  SoftDev
+  K24 -- FOUNDATION
+  2022-11-30
+  time spent: 1.0 hr
+ -->
     <head>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/css/foundation.min.css" crossorigin="anonymous">
         <style>
-            thead {
-                color:red;
+            .header {
+                color:blue;
+            }
+            th{
+              text-align: left;
             }
             h3 {
             text-align: center;
@@ -14,12 +24,9 @@
     <div class="top-bar">
     <div class="top-bar-left">
         <ul class="dropdown menu" data-dropdown-menu>
-          <li class="menu-text">Site Title</li>
-          <li>
-            <a href="#">One</a>
-          </li>
-          <li><a href="#">Two</a></li>
-          <li><a href="#">Three</a></li>
+          <li class="menu-text"><h3>TEAM IVY</h3></li>
+          <li><a href="https://github.com/IvanYeung0610" target="_blank" rel="noopener noreferrer"><h4>Ivan Yeung</h4></a></li>
+          <li><a href="https://github.com/vgraeber" target="_blank" rel="noopener noreferrer"><h4>Vivian Graeber</h4></a></li>
         </ul>
       </div>
       <div class="top-bar-right">
@@ -34,32 +41,89 @@
   <table class="hover unstriped">
     <thead>
       <tr>
-        <th width="200">Ducky's Name</th>
-        <th>Ducky's Owner</th>
-        <th width="150">Ducky's Background Story</th>
-        <th width="150">Ducky's Current Relationship with Owner</th>
+        <th width="100" class="header">Ducky</th>
+        <td width="200" >Bob</th>
+        <td width="200" >Squishy</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>Bob</td>
-        <td>This is longer content Donec id elit non mi porta gravida at eget metus.</td>
-        <td>Content Goes Here</td>
+        <th class="header">Ducky's Owner</td>
+        <td>Ivan Yeung</td>
+        <td>Vivian Graeber</td>
+      </tr>
+      <tr>
+        <th class="header">Date of Aquisition</td>
+        <td>Summer of 2014</td>
         <td>Content Goes Here</td>
       </tr>
       <tr>
-        <td>Squishy</td>
-        <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
-        <td>Content Goes Here</td>
+        <th class="header">Background Story</td>
+        <td>
+          During the summer of 2014 Ivan went on a trip with his summer camp to Build-A-Bear.
+          He was taken through the process of stuffing and plushie and afterwards he had the opportunity to choose his own to help create.
+          Out of the many choices presented to him, I was captured by the charm of Bob.
+          He proceeded to fill the Bob with life and hearts containing his wishes and dreams.
+          That is the story of how Bob became the ducky of Ivan Yeung. THE END.
+        </td>
         <td>Content Goes Here</td>
       </tr>
       <tr>
+        <th class="header">Favorite Food</td>
+        <td>Ribeye Steak</td>
         <td>Content Goes Here</td>
-        <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+      </tr>
+      <tr>
+        <th class="header">Species</td>
+        <td>Dog</td>
         <td>Content Goes Here</td>
+      </tr>
+      <tr>
+        <th class="header">Motto</td>
+        <td>"The Most Fun You'll Ever Make"</td>
+        <td>Content Goes Here</td>
+      </tr>
+      <tr>
+        <th class="header">Relationship Status with Owner</td>
+        <td>
+          Excellent
+          <div class="success progress">
+            <div class="progress-meter" style="width: 95%">
+                <span class="progress-meter-text">95%</span>
+            </div>
+          </div>
+        </td>
+
         <td>Content Goes Here</td>
       </tr>
     </tbody>
 </table>
+
+<div class="grid-container">
+  <div class="grid-x grid-margin-x small-up-2 medium-up-3">
+
+    <div class="cell">
+      <div class="card" style="width: 300px;">
+        <img src="https://di2ponv0v5otw.cloudfront.net/posts/2022/05/05/6273df248e7c64d77b19afd0/m_6273dfa867ffb15e70067acd.jpeg">
+        <div class="card-section">
+        <h4>Meet Bob</h4>
+          <p>Ducky of Ivan Yeung.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="cell">
+      <div class="card" style="width: 300px;">
+        <img src="https://www.allrecipes.com/thmb/TIiBzc43b1WxkOperir8jrYUWs4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/5559751-a62f862a616645bb9b9d597727558821.jpg">
+        <div class="card-section">
+          <h4>Meet Squishy</h4>
+          <p>It has an easy to override visual style, and is appropriately subdued.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  </div>
+</div>
 </body>
 </html>
