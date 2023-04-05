@@ -1,0 +1,28 @@
+Team Ruff:: Ivan Yeung, Andrew Piatetsky
+SoftDev pd8
+K27 -- Basic functions in JavaScript
+2023-04-03t
+
+DISCO
+-----------------------------------------------------------------
+* Ooooh, ___
+* Aaah-haa!  ____
+* ...
+* Scheme syntax 
+    * (operator operand_1 operand_2 ...)
+    * Everything is either a list or function 
+    * functions with variables are created wtih the key word lambda 
+    * define keyword can be used to create a function or declare and assign variables 
+        * (define func (lambda (n) ...))
+=================================================================
+
+QCC
+-----------------------------------------------------------------
+* Why...?
+* Huh?
+* Teh whah now?
+* ...
+=================================================================
+
+
+
