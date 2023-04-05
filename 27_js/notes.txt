@@ -8,12 +8,24 @@ DISCO
 * Ooooh, ___
 * Aaah-haa!  ____
 * ...
+
 * Scheme syntax 
     * (operator operand_1 operand_2 ...)
     * Everything is either a list or function 
     * functions with variables are created wtih the key word lambda 
     * define keyword can be used to create a function or declare and assign variables 
         * (define func (lambda (n) ...))
+
+* JavaScript syntax
+    * code can be run in the console with "node filename.js"
+    * functions are made by first declaring the keyword function followed by what is normally seen in Java 
+        * function func(arg_1, arg_2, ...) {
+            ...
+          }
+    * to return just use the return key word like in Java 
+    * also like Java, semicolons are at the end of each statement
+    * if/else statements appear identical to Java 
+    * console.log() is the print for JavaScript
 =================================================================
 
 QCC
