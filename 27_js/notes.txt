@@ -26,6 +26,14 @@ DISCO
     * also like Java, semicolons are at the end of each statement
     * if/else statements appear identical to Java 
     * console.log() is the print for JavaScript
+
+*JS and HTML
+    *The JS code and the page seem to be linked with the line "<script src="fibfac.js"></script>"
+
+* Using console in web browsers to test JS code 
+    * Firefox: Ctrl-Shift-K
+    * Microsoft Edge: Ctrl-Shift-J
+    * Google Chrome: Ctrl-Shift-J
 =================================================================
 
 QCC
@@ -34,6 +42,10 @@ QCC
 * Huh?
 * Teh whah now?
 * ...
+
+* How do we call a JS function without using a console and instead using inputs such as buttons on the webpage?
+* Are there other languages seperate from JS that interact with pages like JS?
+* Lambda is also used in python but how does it really work?
 =================================================================
 
 
