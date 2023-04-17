@@ -18,8 +18,8 @@
    (delete this block comment once you are done)
 */
 
-// Team Phantom Tollbooth :: Clyde Sinclair, Fierce Dragon 
-// SoftDev pd0
+// Team RUFF :: Ivan Yeung, Andrew Piatetsky
+// SoftDev pd8
 // K28 -- Getting more comfortable with the dev console and the DOM
 // 2023-04-05w
 // --------------------------------------------------
@@ -29,18 +29,23 @@
 //(Ctrl-Shift-K in Firefox to reveal console)
 console.log("AYO");
 
+//var's can be called in the console 
+//able to use operators(including comparisions) with console
 var i = "hello";
 var j = 20;
 
 
 //assign an anonymous fxn to a var
-var f = function(x) {
+//function can be called and used with the the var name with the parameter: f(x)
+//calling f in console returns the code of the function
+var f = function(x) { 
   var j=30;
   return j+x;
 };
 
 
 //instantiate an object
+//calling o returns a mongodb type document
 var o = { 'name' : 'Thluffy',
           age : 1024,
           items : [10, 20, 30, 40],
