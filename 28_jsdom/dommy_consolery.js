@@ -101,6 +101,22 @@ var stripe = function() {
   }
 };
 
+var addPara = function( text ) {
+
+  let body = document.getElementById("123");
+  let div = document.createElement("div");
+  let p = document.createElement("p");
+  p.innerHTML = text;
+  // div.append(p);
+  body.append(p);
+
+  // console.log(div.childNodes); // NodeList [ <p> ]
+  // var page = document.getElementsByTagName("body");
+  // page.appendChild( text );
+  // page.append( text );
+  // var page = document.createElement("p");
+}
+
 //insert your implementations here for...
 // FIB
 var FIB = function(n) {
@@ -152,7 +168,13 @@ document.getElementById("b").addEventListener("click", fac9);
 document.getElementById("c").addEventListener("click", fac24);
 
 function fac3() {
-  document.getElementById("result").innerHTML = FAC(3); //innerHTML seems to replace pre existing text with new text
+  // document.getElementById("result").innerHTML = FAC(3); //innerHTML seems to replace pre existing text with new text
+  // document.getElementById("result").append(FAC(3));
+  // document.getElementById("result").createElement("p").innerHTML = FAC(3);
+  document.getElementById("result").createElement("p").append(FAC(3));
+
+
+
 }
 
 function fac9() {
