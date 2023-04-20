@@ -1,0 +1,10 @@
+Team RUFF :: Ivan Yeung, Andrew Piatetsky
+SoftDev pd8
+K28 -- Getting more comfortable with the dev console and the DOM
+2023-04-05w
+
+DISCO:
+* innerHTML command seems to remove other child of a parent and replaces it with whatever it is set equals to
+
+QCC:
+* How do you make a coditional for an event listener in JS such that it can check if an input in a form is a correct type?

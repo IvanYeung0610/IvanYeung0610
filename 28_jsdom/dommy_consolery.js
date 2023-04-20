@@ -118,6 +118,7 @@ const FAC = (input) => { //seems to be called in the same fashion as other style
       return input * FAC(input - 1);
   }
 }
+
 // GCD
 const GCD = (num1, num2) => {
   var product = num1 * num2;
@@ -125,12 +126,77 @@ const GCD = (num1, num2) => {
 }
 
 var LCM = function(num1, num2) {
-  var mult = num1;
-  while (mult % num2 != 0) {
-    mult = mult + num1;
+  if (num1 > num2) {
+    var mult = num1;
+    var increment = num1;
+    var check = num2;
+  } else {
+    var mult = num2;
+    var increment = num2;
+    var check = num1;
+  }
+
+  while (mult % check != 0) {
+    mult = mult + increment;
   }
   return mult;
 }
+
+var helloWorld = function() {
+  return "Hello World";
+}
+
+//Making calculator properties for the page for Factorial function
+document.getElementById("a").addEventListener("click", fac3);
+document.getElementById("b").addEventListener("click", fac9);
+document.getElementById("c").addEventListener("click", fac24);
+
+function fac3() {
+  document.getElementById("result").innerHTML = FAC(3); //innerHTML seems to replace pre existing text with new text
+}
+
+function fac9() {
+  document.getElementById("result").innerHTML = FAC(9); //innerHTML seems to replace pre existing text with new text
+}
+
+function fac24() {
+  document.getElementById("result").innerHTML = FAC(24); //innerHTML seems to replace pre existing text with new text
+}
+
+document.getElementById("d").addEventListener("click", fib5);
+document.getElementById("e").addEventListener("click", fib7);
+document.getElementById("f").addEventListener("click", fib18);
+
+function fib5() {
+  document.getElementById("result").innerHTML = FIB(5); //innerHTML seems to replace pre existing text with new text
+}
+
+function fib7() {
+  document.getElementById("result").innerHTML = FIB(7); //innerHTML seems to replace pre existing text with new text
+}
+
+function fib18() {
+  document.getElementById("result").innerHTML = FIB(18); //innerHTML seems to replace pre existing text with new text
+}
+
+document.getElementById("g").addEventListener("click", gcd_34_16);
+document.getElementById("j").addEventListener("click", gcd_15_232); //When assigning button with id of "h" it becomes unresponseive. Not sure if this is an actual bug.
+document.getElementById("i").addEventListener("click", gcd_423_834);
+
+function gcd_34_16(){
+  document.getElementById("result").innerHTML = GCD(34, 16);
+}
+
+function gcd_15_232(){
+  document.getElementById("result").innerHTML = GCD(15, 232);
+}
+
+function gcd_423_834(){
+  document.getElementById("result").innerHTML = GCD(423, 834);
+}
+
+
+
 // In addition to the style shown above,
 //  you are encouraged to test drive the "arrow function syntax" as shown below.
 //  Note anything notable.
