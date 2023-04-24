@@ -116,6 +116,7 @@ const FAC = (input) => { //seems to be called in the same fashion as other style
 }
 
 // GCD
+// Source for GCD equation used in the code below: https://en.wikipedia.org/wiki/Greatest_common_divisor
 const GCD = (num1, num2) => {
   var product = num1 * num2;
   return product / LCM(num1, num2);
