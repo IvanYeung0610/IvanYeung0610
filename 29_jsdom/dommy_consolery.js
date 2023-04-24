@@ -1,7 +1,7 @@
 // Team RUFF :: Ivan Yeung, Andrew Piatetsky
 // SoftDev pd8
-// K28 -- Getting more comfortable with the dev console and the DOM
-// 2023-04-05w
+// K29 -- DOMfoolery++
+// 2023-04-24m
 // --------------------------------------------------
 
 
@@ -81,7 +81,7 @@ var stripe = function() {
   }
 };
 
-var addPara = function( text ) {
+var addPara = function( text ) { //<-- NEW!!!
 
   let body = document.getElementById("123");
   let div = document.createElement("div");
@@ -149,6 +149,13 @@ document.getElementById("c").addEventListener("click", fac24);
 
 function fac3() {
   document.getElementById("result").innerHTML = FAC(3); //innerHTML seems to replace pre existing text with new text
+  //TESTING .append and .createElement
+  // document.getElementById("result").append(FAC(3));
+  // document.getElementById("result").createElement("p").innerHTML = FAC(3);
+  //document.getElementById("result").createElement("p").append(FAC(3));
+
+
+
 }
 
 function fac9() {

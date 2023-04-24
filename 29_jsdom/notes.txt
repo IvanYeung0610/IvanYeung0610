@@ -1,0 +1,12 @@
+Team Ruff:: Ivan Yeung, Andrew Piatetsky
+SoftDev pd8
+K29 -- DOMfoolery++
+2023-04-24M
+
+.append
+    * function used to add an element to a pre-existing element
+
+.createElement
+    * function that creates a new element
+    * works with .append in order for element to appear 
+    * in order for element to show on html when called, it can be appended to an element that is hardcoded into html(method we found)
