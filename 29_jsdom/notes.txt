@@ -10,3 +10,7 @@ K29 -- DOMfoolery++
     * function that creates a new element
     * works with .append in order for element to appear 
     * in order for element to show on html when called, it can be appended to an element that is hardcoded into html(method we found)
+
+.addEventListener
+    * syntax: .addEventListener(action, function_name) [for the function_name DON'T include parenthesis]
+    * there seems to be a way to write a function inside the syntax of .addEventListener, but need to explore further
