@@ -1,0 +1,41 @@
+Team RUFF :: Ivan Yeung, Andrew Piatetsky
+SoftDev pd8
+K30 -- JS Paint
+2023-04-24w
+
+QCC:
+* What's the difference between a function with no parameters and a function with element handling?
+    * is there an advantage to using a function with element handling because both appear to work
+
+DISCO:
+* getContext("2d"): gives ability to draw on element it gets context of
+    * arc
+        * draws arcs to circles
+        * syntax: arc(x, y, radius, startAngle, endAngle) -OR- arc(x, y, radius, startAngle, endAngle, counterclockwise)
+            * angles are measured in RADIANS
+    * stroke
+        * draws the border of the shape
+        * syntax: ctx.stroke()
+    * fill
+        * fills current or given path 
+        * syntax: fill(), fill(path), fill(fillRule), fill(path, fillRule)
+    * fillStyle
+        * used to specifies the color, gradient, or pattern 
+        * syntax: ctx.fillStyle("property")
+    * fillRect
+        * draws DIRECTLY to the canvas meaning other outside styling functions like fill and stroke won't affect it
+            * draws according to current fillStyle 
+        * syntax: fillRect(x, y, width, height)
+    * beginPath
+        * starts a new path by emptying the list of sub-paths.
+            * the fact that it "empties" other pre-existing paths seems pretty important for wiping it
+        * syntax: ctx.beginPath()
+    * clearRect
+        * erases pixels in a rectangular area
+        * syntax: clearRect(x, y, width, height)
+* offsetX
+    * provides the offset in the X coordinate of the mouse pointer between that event and the padding edge of the target node
+    * syntax: e.offsetX (Mouse Event property)
+* offsetY
+    *  provides the offset in the Y coordinate of the mouse pointer between that event and the padding edge of the target node
+    * * syntax: e.offsetY (Mouse Event property)
