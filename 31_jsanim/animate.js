@@ -1,4 +1,4 @@
-//  Ivan Yeung, Andrew Gabriel Thompson
+//  Ivan Yeung, Gabriel Thompson
 // SoftDev pd8
 //  K31 -- canvas based JS animation
 //  2023-04-25t
@@ -18,27 +18,31 @@ var clear = function(e) {
     ctx.clearRect(0, 0, c.width, c.height); //just wipes everything inside the slate
 }
 
-var radius = 0;
+var radius = 250;
 var growing = true;
 
 var drawDot = () => {
+    console.log("test");
+    console.log(radius);
+    window.cancelAnimationFrame(requestID);
     /*
         Wipe the canvas,
         Repaint the circle,
 
         ...and somewhere (where/when is the right time?)
         Update request ID to propagate the animation.
-        You wil need
+        You will need
         window.cancelAnimationFrame()
         window.requestAnimationFrame()
     */
-    clear(e);
+    clear();
+    //ctx.fillStyle = "rgb(" + Math.floor(Math.random() * 255) + "," + Math.floor(Math.random() * 255) + "," + Math.floor(Math.random() * 255) + ")";
 
-    if (radius == 250) {
+    if (radius >= 250) {
         growing = false;
     }
 
-    if (radius == 0) {
+    if (radius <= 0) {
         growing = true;
     }
 
@@ -47,12 +51,21 @@ var drawDot = () => {
     } else {
         radius--;
     }
+
+    ctx.beginPath();
+    ctx.arc(250, 250, radius,0,Math.PI*2);
+    //ctx.arc(Math.floor(Math.random()*250), Math.floor(Math.random()*250), radius,0,Math.PI*2);
+    ctx.fill();
+    requestID = window.requestAnimationFrame(drawDot);
+    console.log("request ID:" + requestID);
 };
 
 //var stopIt = function() {
 var stopIt = ()=> {
     console.log("stopIt invoked...");
     console.log( requestID );
+
+    window.cancelAnimationFrame(requestID);
 
     /* YOUR CODE HERE
         ... to stop the animation
