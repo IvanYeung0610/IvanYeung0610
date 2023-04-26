@@ -1,0 +1,17 @@
+Ivan Yeung,  Gabriel Thompson
+SoftDev pd8
+K31 -- canvas based JS animation
+2023-04-25t
+
+DISCO:
+    * requestID (output of window.requestAnimationFrame()) gives an id to a frame that is being referred to
+    * animation is created by repeatedly calling requestAnimationFrame() in a loop
+    * requestAnimationFrame refreshes/run update function at a consistent interval
+    * cancelAnimationFrame stops the loop of requestAnimationFrame based off requestID
+    * negative radii are not permissable in arc()
+
+QCC:
+    * is requestAnimationFrame recursive given how it is written in a function that is its callback function?
+    * is there a dedicated function for creating circles? (more compact)
+    * When you click requestAnimationFrame that makes it faster, what's actually happening?
+        * Is it like some sort of "multi-threading" process?
