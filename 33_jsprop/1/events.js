@@ -4,7 +4,7 @@
 var tds = document.getElementsByTagName('td');
 
 var clicky = function(e) {
-  alert( this.innerHTML );
+  alert( this.innerHTML ); //pulls up box with text of the cell we clicked on
 };
 
 for (var x=0; x < tds.length; x++) {

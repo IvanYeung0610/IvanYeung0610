@@ -1,0 +1,11 @@
+* e
+    * best practice for functions handling events
+* e.pD
+    * adding it caused code to break
+    * best practice for any function handling events
+
+* Best practice 
+    *;
+    *mdn
+
+* able to add event listener to anything not just buttons

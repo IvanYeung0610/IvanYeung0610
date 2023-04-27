@@ -16,7 +16,7 @@ ctx.fillStyle = "turqoise";
 var requestID;
 
 var clear = (e) => {
-    // Event.preventDefault();
+    //Event.preventDefault();
     ctx.clearRect(0, 0, c.width, c.height);
 };
 
