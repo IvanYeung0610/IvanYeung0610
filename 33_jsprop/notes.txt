@@ -4,8 +4,12 @@ Spring 2023
 HTML file for exploring DOM event propogation using JavaScript
 
 BUBBLE:
-
+    * Event Bubbling is just when the nested events are fired from the child to the parent.
+    * Seems to be the default for adding an eventlistener
 CAPTURE:
+    * Event capture is when the nested events are fired from the child to the parent.
+    * can be activated with { capture: true } in the addEventListener function
+
 
 DISCO:
 * e
@@ -21,3 +25,5 @@ DISCO:
 * able to add event listener to anything not just buttons
 
 QCC:
+* Why is knowing this useful?
+    * When would you need to use the boolean argument in addEventListener? (Seems arbitrary) 
